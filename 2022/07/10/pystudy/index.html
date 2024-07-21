@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#3367D6"/>
+  <link rel="apple-touch-icon" href="/icons-192.png">
+  <link rel="manifest" href="/manifest.json">
+  
+  <meta name="generator" content="Hexo 7.3.0">
+
+  
+    <meta name="description" content="记录算法题解">
+  
+
+  
+    <meta name="keywords" content="Algorithm">
+  
+
+  
+    <meta name="author" content="Mr Du">
+  
+
+  
+
+  
+
+  <title>aaa | Algorithm  &#34;Algorithm&#34;:Unknown word.</title>
+
+  
+
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+
+  <!--mathjax latex数学公式显示支持-->
+  
+  
+
+  
+
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+  <div class="root-container">
+    
+<!-- header container -->
+<header class="header-container post">
+  
+    <div class="post-image" style="background-image: url(https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg)"></div>
+  
+
+  <!-- navbar -->
+<nav class="navbar">
+  <div class="navbar-content">
+    <!-- logo -->
+    <div class="navbar-logo">
+      <a href="/">
+        
+          Algorithm  &#34;Algorithm&#34;:Unknown word.
+        
+      </a>
+    </div>
+    <!-- link -->
+    <div class="navbar-link">
+      <div class="navbar-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="navbar-list">
+        
+          <li class="navbar-list-item"><a href="/">首页</a></li>
+        
+          <li class="navbar-list-item"><a href="/links">友链</a></li>
+        
+          <li class="navbar-list-item"><a href="/about">关于</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    <div class="header-content">
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">aaa</h1>
+          <h2 class="title-sub-wrap">
+            <strong>Mr Du</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2022-07-10T04:22:29.000Z" itemprop="datePublished">2022-07-10</time>
+          </h2>
+          
+            <h2 class="last-time">
+              <span>最后更新于</span>
+              <time  class="article-updated" datetime="2024-07-21T04:46:47.490Z" itemprop="dateUpdated">2024-07-21</time>
+            </h2>
+          
+          
+          <ul class="wrap-list dark">
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+</ul>
+        </div>
+      </div>
+    </div>
+  
+
+  
+  
+  
+</header>
+
+    <!-- 文章 -->
+
+<!-- 文章内容 -->
+<div class="body-container">
+  <article class="content-container layout-block post-container">
+    <div class="article-info">
+      
+      
+      
+      
+      <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
+        <h1 id="Python笔记-python的特点是：一切皆对象"><a href="#Python笔记-python的特点是：一切皆对象" class="headerlink" title="Python笔记(python的特点是：一切皆对象)"></a>Python笔记(python的特点是：一切皆对象)</h1><p>在Python中一个对象由三部分组成：id（唯一标识一个对象，地址），type（该对象的所属类型），value（对应的值）</p>
+<p>Python中的海龟画图，<strong>一定要引入turtle模块</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line">turtle.color(<span class="string">&quot;red&quot;</span>) <span class="comment">#线条的颜色</span></span><br><span class="line">turtle.width() <span class="comment">#线条的宽度</span></span><br><span class="line">turtle.penup() <span class="comment">#画笔抬起</span></span><br><span class="line">turtle.pendown() <span class="comment">#画笔落下</span></span><br><span class="line">turtle.hideturtle() <span class="comment">#隐藏画笔的箭头</span></span><br><span class="line">turtle.goto(x,y) <span class="comment">#从当前位置走到(x,y)的位置</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>Python中当前时间的获得</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line">time.time()</span><br></pre></td></tr></table></figure>
+
+<p>获得的时间小数点后面代表的是微秒，也就是百万分之一秒</p>
+</li>
+<li><p>Python中的&#x3D;&#x3D;和is</p>
+<p>&#x3D;&#x3D;：比较的是对象中是value</p>
+<p>is：比较的是对象的id，也就是对象的地址</p>
+</li>
+</ul>
+<p>字符串驻留机制（<strong>只针对含字母，数字以及下划线的字符串，除了这三个外含有其他字符的字符串不支持</strong>）：仅保留一份且不可变字符串的方法，不同的字符串的值存放在字符串驻留池中，也就是说我定义一个字符串a &#x3D; “xxx”，再定义一个字符串b&#x3D; “xxx”，那么b引用的是a所引用的那个字符串，因为他们的值相同。</p>
+<p>Python中的字符串是不可变的，但是通过io模块可以将一个不可变字符串变成一个可变字符串新对象</p>
+<p>for example:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> io <span class="comment">#引入io模块</span></span><br><span class="line">s = <span class="string">&quot;hello,sxt&quot;</span> <span class="comment">#定义一个字符串</span></span><br><span class="line">sio = io.StringIo(s) <span class="comment">#将s变成一个可变字符串给sio,此时的sio是一个新的字符串对象</span></span><br><span class="line">sio.getvalue() <span class="comment">#获取新字符串的内容</span></span><br><span class="line">sio.seek(n) <span class="comment">#将游标移动到索引为n的位置，索引从0开始计数</span></span><br><span class="line">sio.write(<span class="built_in">str</span>) <span class="comment">#将上面索引处的字符改成str对应的内容</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="参数的传递之深浅拷贝"><a href="#参数的传递之深浅拷贝" class="headerlink" title="参数的传递之深浅拷贝"></a>参数的传递之深浅拷贝</h3><p><strong>浅拷贝</strong>：浅拷贝只会拷贝当前对象的最外层对象，内层对象不会拷贝，共用同一个内层，也就是只要通过<strong>内层对象的引用修改内层对象</strong>，其他的副本的内层对象都会跟着变。通过外层引用修改外层对象，其他的不受影响，当前外层引用指向的对象会改变。</p>
+<p><img src="/./pystudy/image-20211117233702504.png" alt="image-20211117233702504"></p>
+<p><strong>深拷贝</strong>：深拷贝会把这个对象中外层以及所有的内层对象全部拷贝一份，不存在共用的情况，拷贝几次，对应的堆里面的内容就会复制几份，改其中一个，另外的不受影响</p>
+<p><img src="/./pystudy/image-20211117234303772.png" alt="image-20211117234303772"></p>
+<p><strong>注意</strong>：传递不可变对象的时候用的是浅拷贝，所以当一个函数的参数最外层对象是不可变对象，内层对象是可变对象的时候，传递后在函数体内修改内层对象的话，源对象也会跟着变。</p>
+<p><strong>强制参数传递适用于可变参数在位置参数前面，此时传递参数时，实参的位置参数一定要使用“形参名&#x3D;值”的形式去传递，否则的话前面的可变参数会把传递的参数全部接受，这样的话形参的存在就毫无意义了。</strong></p>
+<h3 id="lambda表达式"><a href="#lambda表达式" class="headerlink" title="lambda表达式"></a>lambda表达式</h3><p>python中的lambda表达式的格式为：<strong>lambda arg1，arg2，arg3:&lt;表达式&gt;</strong>,其中&lt;表达式&gt;是关于前面三个参数的运算表达式</p>
+<p>还有一种lambda用法，和列表有关系，如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">g = [<span class="keyword">lambda</span> a,b:a+b]</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;结果为<span class="subst">&#123;g[<span class="number">0</span>](<span class="number">1</span>,<span class="number">2</span>)&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/./pystudy/image-20211121211223883.png" alt="image-20211121211223883"></p>
+<p>其中g是一个列表对象，g的元素是一个lambda表达式，在输出时指定了是g[0]这个元素，并且在g[0]后面加了圆括号，里面是对应lambda表达式的实参值</p>
+<h3 id="eval（）函数"><a href="#eval（）函数" class="headerlink" title="eval（）函数"></a>eval（）函数</h3><p>功能是将有效字符串当做表达式求值并返回或者被当做语句直接执行，例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;------直接被当做语句执行--------&quot;</span>)</span><br><span class="line"><span class="built_in">eval</span>(<span class="string">&quot;print(&#x27;人生苦短我用python&#x27;)&quot;</span>)</span><br><span class="line">dict1 = <span class="built_in">dict</span>(a=<span class="number">100</span>,b=<span class="number">200</span>)</span><br><span class="line">d = <span class="built_in">eval</span>(<span class="string">&quot;a+b&quot;</span>,dict1)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------作为表达式语句执行---------&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(d)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/./pystudy/image-20211122104108252.png" alt="image-20211122104108252"></p>
+<p>该函数有三个参数，按顺序分别是：</p>
+<p>source：一个 Python 表达式或函数 compile()返回的代码对象 </p>
+<p>globals：可选。必须是 dictionary </p>
+<p>locals：可选。任意映射对象 </p>
+<p>*<em>涉及到时间，日期等问题的时候一定要导入datetime类，该类位于datetime模块中，即语法为：</em>from datetime import datetime* **</p>
+<h3 id="面向对象基础知识"><a href="#面向对象基础知识" class="headerlink" title="面向对象基础知识"></a>面向对象基础知识</h3><p>对于python中类的**-init-(self)**方法,在对象被创建时便会被执行，除了初始化方法外类中的其他自定义的实例方法都要通过创建的对象进行调用</p>
+<p>如果自己不定义带参的初始化方法，那么系统将默认为我们创建一个无参(self不属于形参列表范围)初始化方法；如果定义，则系统不创建，而且定义时一定要有第一个参数<strong>self</strong></p>
+<p>创建对象的方式，有参和无参两种：</p>
+<p>无参</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;我是Student类的初始化方法&quot;</span>)</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">speakWord</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;我可以讲话&quot;</span>)</span><br><span class="line">student = Student()</span><br><span class="line">student.speakWord()</span><br></pre></td></tr></table></figure>
+
+<p><img src="/./pystudy/image-20211129235909414.png" alt="image-20211129235909414"></p>
+<p>有参</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span>:</span><br><span class="line">    <span class="comment">#初始化方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,name,age</span>):</span><br><span class="line">        <span class="variable language_">self</span>.name = name</span><br><span class="line">        <span class="variable language_">self</span>.age = age</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;我的年龄是&quot;</span>,<span class="variable language_">self</span>.age)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;我是Student类的初始化方法&quot;</span>)</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">speak</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;我叫&quot;</span>,<span class="variable language_">self</span>.name)</span><br><span class="line"><span class="comment">#创建一个学生对象</span></span><br><span class="line">objectOne = Student(<span class="string">&quot;李浩&quot;</span>,<span class="number">29</span>)</span><br><span class="line"><span class="comment">#调用类中非初始化方法</span></span><br><span class="line">objectOne.speak()</span><br></pre></td></tr></table></figure>
+
+<p><img src="/./pystudy/image-20211129234416811.png" alt="image-20211129234416811"></p>
+<p>定义实例化方法时，第一个参数列表必须是<strong>self</strong></p>
+<p>调用实例化方法时：对象名.实例方法名()，在解释器中执行的其实是：类名.实例方法名(对象名)</p>
+<h5 id="pass"><a href="#pass" class="headerlink" title="pass"></a>pass</h5><p>pass语句是一个空语句，用的时候直接写“pass”即可，它的作用是作为一个占位符先占着位置，后续对当前位置加以补充</p>
+<p>调用实例方法的真相：</p>
+<p><img src="/./pystudy/image-20211222154146297.png" alt="image-20211222154146297"></p>
+<h5 id="类的专有方法"><a href="#类的专有方法" class="headerlink" title="类的专有方法"></a>类的专有方法</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">__init__ : 构造函数，在生成对象时调用</span><br><span class="line">__del__ : 析构函数，释放对象时使用</span><br><span class="line">__repr__ : 打印，转换</span><br><span class="line">__setitem__ : 按照索引赋值</span><br><span class="line">__getitem__: 按照索引获取值</span><br><span class="line">__len__: 获得长度</span><br><span class="line">__cmp__: 比较运算</span><br><span class="line">__call__: 函数调用</span><br><span class="line">__add__: 加运算</span><br><span class="line">__sub__: 减运算</span><br><span class="line">__mul__: 乘运算</span><br><span class="line">__truediv__: 除运算</span><br><span class="line">__mod__: 求余运算</span><br><span class="line">__pow__: 乘方</span><br></pre></td></tr></table></figure>
+
+<h5 id="类对象"><a href="#类对象" class="headerlink" title="类对象"></a>类对象</h5><p>当python解释器执行到class语句时，会创建一个变量名为‘类名’的类对象。相当于模型工具厂制造了一个模型，这个模型就是类对象，而实例对象又是通过这个模型刻出来的。</p>
+<p>一个类对象里面包含的成员是：类属性，方法</p>
+<p><strong>实例方法是存在类对象里面的，可以被所有对象共享</strong></p>
+<h5 id="类属性"><a href="#类属性" class="headerlink" title="类属性"></a>类属性</h5><p>因为python是动态语言，所以可以给对象添加类中不存在的新成员。</p>
+<p>类属性从属类对象，它可以被所有的实例对象所共享，定义方式为：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span>:</span><br><span class="line">	name = <span class="string">&quot;李华&quot;</span></span><br><span class="line"><span class="comment">#调用方式:类名.属性名</span></span><br><span class="line">Student.name</span><br></pre></td></tr></table></figure>
+
+<p>如果是私有实例属性的话，即属性名是以两个下划线开头的，那么只能在类的内部通过类名或者self进行访问，外部（不在类的定义范围内）将无法使用“引用.方法名”的形式访问，但可以使用：”<strong>引用._类名 _ _私有属性名</strong>“进行调用</p>
+<p>实例属性：构造方法中以self打头进行调用初始化的属性；静态属性：没有使用self关键字进行打头初始化的属性</p>
+<p>私有实例方法：方法名是以两个下划线开头的方法，可以在类的内部通过“self.方法名”进行调用。也可以在外部使用”<strong>引用._类名 _ _私有方法名</strong>“进行调用</p>
+<p>私有类属性和私有类方法在内部是通过<strong>类名._ _私有属性</strong>，外部使用<strong>类名._ 类名 _ _私有属性</strong>进行访问</p>
+<h5 id="类方法"><a href="#类方法" class="headerlink" title="类方法"></a>类方法</h5><p>在方法的上一行加一个装饰器：**@classmethod**，该装饰器的作用是表示下面的这个方法为类方法。</p>
+<p>既可以用类名调用也可以使用实例对象调用（传入的cls是该实例对象对应的类）。</p>
+<p><strong>前方高能</strong>：类方法内部可以调用其他类方法或者静态方法，但是不能调用实例方法，因为类方法不含参数self</p>
+<p>参数<strong>cls</strong>必须要有，当子类继承父类时，传入的cls是子类而非父类</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;定义一个学生类&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,name,age</span>):</span><br><span class="line">        <span class="variable language_">self</span>.name = name</span><br><span class="line">        <span class="variable language_">self</span>.age = age</span><br><span class="line">    <span class="comment">#定义一个类方法</span></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">testMethod</span>(<span class="params">cls</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;当前是Student类的类方法&quot;</span></span><br><span class="line"><span class="comment">#创建一个Student对象</span></span><br><span class="line">student = Student(<span class="string">&quot;李华&quot;</span>,<span class="number">26</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;类名调用类方法:&quot;</span>,Student.testMethod())</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;对象调用类方法:&quot;</span>,student.testMethod())</span><br></pre></td></tr></table></figure>
+
+<p><img src="/./pystudy/image-20211202000235056.png" alt="image-20211202000235056"></p>
+<h5 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h5><p>在方法的上一行加一个装饰器：**@staticmethod<strong>，该装饰器的作用是表示下面的这个方法为静态方法，调用和类方法一样，既可以类名也可以对象。</strong>前方高能**：静态方法内部不能调用其他方法，因为静态方法不含任何参数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;定义一个学生类&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,name,age</span>):</span><br><span class="line">        <span class="variable language_">self</span>.name = name</span><br><span class="line">        <span class="variable language_">self</span>.age = age</span><br><span class="line">    <span class="comment">#定义一个类方法</span></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">testMethod</span>():</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;当前是Student类的静态方法&quot;</span></span><br><span class="line"><span class="comment">#创建一个Student对象</span></span><br><span class="line">student = Student(<span class="string">&quot;李华&quot;</span>,<span class="number">26</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;类名调用类方法:&quot;</span>,Student.testMethod())</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;对象调用类方法:&quot;</span>,student.testMethod())</span><br></pre></td></tr></table></figure>
+
+<p><img src="/./pystudy/image-20211202000412081.png" alt="image-20211202000412081"></p>
+<p><strong>在python中不存在方法的重载，因为方法的参数个数可以由可变参数来决定，参数的类型是调用的时候才会知道的，多个重名的方法只有最后一个方法起作用</strong></p>
+<p>将对象类似于方法一样调用：使用_ call _方法可以这样操作，例如person是Person类的实例对象，那么person(形参列表)，调用的其实是 _ call _(self,形参列表),对象后面的形参传到了 _ call _方法后面的形参列表里面</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Employee</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__call__</span>(<span class="params">self, name,salary</span>):</span><br><span class="line">        year_salary = salary * <span class="number">12</span></span><br><span class="line">        month_salary = salary</span><br><span class="line">        day_salary = month_salary // <span class="number">30</span></span><br><span class="line">        hour_salary = day_salary // <span class="number">8</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&quot;<span class="subst">&#123;name&#125;</span>的年薪资是:<span class="subst">&#123;year_salary&#125;</span>,月薪资是<span class="subst">&#123;month_salary&#125;</span>,日薪资是<span class="subst">&#123;day_salary&#125;</span>,小时薪资是<span class="subst">&#123;hour_salary&#125;</span>&quot;</span></span><br><span class="line">emp1 = Employee()</span><br><span class="line"><span class="string">&quot;&quot;&quot;对象名成为了方法名，达到了对象类似于方法的调用效果&quot;&quot;&quot;</span></span><br><span class="line"><span class="built_in">print</span>(emp1(<span class="string">&quot;高淇&quot;</span>, <span class="number">8000</span>))</span><br></pre></td></tr></table></figure>
+
+<p><img src="/./pystudy/image-20211223174422569.png" alt="image-20211223174422569"></p>
+<h5 id="property装饰器"><a href="#property装饰器" class="headerlink" title="@property装饰器"></a>@property装饰器</h5><p>该装饰器的作用是将一个方法的调用变成属性的调用，看具体例子：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Employee</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;一个职员类&quot;&quot;&quot;</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;初始化方法&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,name,salary</span>):</span><br><span class="line">        <span class="variable language_">self</span>.name = name</span><br><span class="line">        <span class="string">&quot;&quot;&quot;工资属性私有化&quot;&quot;&quot;</span></span><br><span class="line">        <span class="variable language_">self</span>.__salary = salary</span><br><span class="line">    <span class="string">&quot;&quot;&quot;和get方法功能一样&quot;&quot;&quot;</span></span><br><span class="line"><span class="meta">    @property</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">salary</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;self.name&#125;</span>的薪资为<span class="subst">&#123;self.__salary&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span>.__salary</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;&quot;&quot;和set方法功能一样&quot;&quot;&quot;</span></span><br><span class="line"><span class="meta">    @salary.setter</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">salary</span>(<span class="params">self,salary</span>):</span><br><span class="line">        <span class="keyword">if</span>(<span class="number">1</span> &lt; salary &lt; <span class="number">100</span>):</span><br><span class="line">            <span class="variable language_">self</span>.__salary = salary</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;修改成功!&quot;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;self.name&#125;</span>薪资有问题&quot;</span>)</span><br><span class="line">emp1 = Employee(<span class="string">&quot;高淇&quot;</span>,<span class="number">400</span>)</span><br><span class="line"><span class="string">&quot;&quot;&quot;赋值操作调用的是带@salary.setter装饰器的方法&quot;&quot;&quot;</span></span><br><span class="line">emp1.salary = <span class="number">30</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;直接用引用.方法名调用的是带@property装饰器的方法&quot;&quot;&quot;</span></span><br><span class="line"><span class="built_in">print</span>(emp1.salary)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/./pystudy/image-20211223174449486-16402526928811.png" alt="image-20211223174449486"></p>
+<p>对于要使用该装饰器定义的属性要用私有属性，因为在@property定义的方法下返回的是对应的属性值，如果写成self.salary的话那么就会当做方法使用，这样就会陷入无限递归中。正确写法是对设置get和set方法的属性定义为私有，get和set的方法名为私有属性去掉两个下划线，例子如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Employee</span>:</span><br><span class="line">    __<span class="built_in">id</span> = <span class="number">1000</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,name,salary</span>):</span><br><span class="line">        Employee.__<span class="built_in">id</span> += <span class="number">1</span> <span class="comment">#每创建一个对象就要将对应的id加一</span></span><br><span class="line">        <span class="variable language_">self</span>.<span class="built_in">id</span> = Employee.__<span class="built_in">id</span></span><br><span class="line">        <span class="variable language_">self</span>.name = name</span><br><span class="line">        <span class="variable language_">self</span>.__salary = salary <span class="comment">#私有属性</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__add__</span>(<span class="params">self, other</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">isinstance</span>(other,Employee):</span><br><span class="line">            <span class="keyword">return</span> <span class="variable language_">self</span>.salary + other.salary</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;不是同类对象，不能相加&quot;</span>)</span><br><span class="line"><span class="meta">    @property</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">salary</span>(<span class="params">self</span>): <span class="comment">#相当于get方法</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;self.name&#125;</span>的薪资为:<span class="subst">&#123;self.__salary&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span>.__salary</span><br><span class="line"><span class="meta">    @salary.setter</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">salary</span>(<span class="params">self,salary</span>): <span class="comment">#相当于set方法</span></span><br><span class="line">        <span class="keyword">if</span> <span class="number">1000</span> &lt; salary &lt; <span class="number">50000</span>:</span><br><span class="line">            <span class="variable language_">self</span>.__salary = salary</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;薪资不合理!&quot;</span>)</span><br><span class="line">e1 = Employee(<span class="string">&quot;张三&quot;</span>,<span class="number">100</span>)</span><br><span class="line"><span class="built_in">print</span>(e1.salary)</span><br><span class="line">e1.salary = <span class="number">10000000</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/./pystudy/image-20220120165900210-16426691431311.png" alt="image-20220120165900210"></p>
+<h3 id="面向对象进阶知识"><a href="#面向对象进阶知识" class="headerlink" title="面向对象进阶知识"></a>面向对象进阶知识</h3><p><strong>定义子类时一般在子类的构造方法里面需要显式调用父类的构造方法</strong></p>
+<h5 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h5><p><strong>子类继承了父类中除构造方法外所有的成员，但父类的私有属性以及方法虽然被子类继承但是子类不能直接使用，在子类中还可以重写父类中的方法，将父类中的方法进行覆盖。</strong></p>
+<p>继承的格式为:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Student</span>(<span class="title class_ inherited__">Person</span>):</span><br></pre></td></tr></table></figure>
+
+<p>其中 Student为子类，Person为子类</p>
+<p><strong>重写：</strong>子类重写父类的方法时，方法名，形参列表，形参个数一定要绝对保持和父类一样，唯一不一样的就是方法体。重写只重新修改方法体。</p>
+<h5 id="str-self-方法"><a href="#str-self-方法" class="headerlink" title="_ str _(self)方法"></a>_ str _(self)方法</h5><p>类中有该方法时，如果执行  print(类对象的实例对象名) 时，则会执行_ str _(self)方法的方法体,例如:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,name,age</span>):</span><br><span class="line">        <span class="variable language_">self</span>.name = name</span><br><span class="line">        <span class="variable language_">self</span>.age = age</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">say_age</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;self.name&#125;</span>的年龄是:<span class="subst">&#123;self.age&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__str__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&quot;名字是:<span class="subst">&#123;self.name&#125;</span>,年龄是:<span class="subst">&#123;self.age&#125;</span>&quot;</span></span><br><span class="line">obj = <span class="built_in">object</span>()</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">dir</span>(obj))</span><br><span class="line">s2 = Person(<span class="string">&quot;高淇&quot;</span>,<span class="number">18</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">dir</span>(s2))</span><br><span class="line"><span class="built_in">print</span>(s2)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/./pystudy/image-20211224181952040.png" alt="image-20211224181952040"></p>
+<h5 id="多重继承"><a href="#多重继承" class="headerlink" title="多重继承"></a>多重继承</h5><p>多重继承指的是，一个类可以继承多个父类，具备多个父类的特点。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">A</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">aa</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;aa&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">say</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;say AAA&quot;</span>)</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">B</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">bb</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;bb&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">say</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;say BBB&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">C</span>(B,A):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">cc</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;cc&quot;</span>)</span><br><span class="line">c = C()</span><br><span class="line"><span class="built_in">print</span>(C.mro())</span><br><span class="line"><span class="comment">#调用say()方法时，因为B和A中都有say()方法，那么c调用的是从继承的父类顺序中从左往右扫描找到第一个含say()方法的父类并调用它</span></span><br><span class="line">c.say()</span><br></pre></td></tr></table></figure>
+
+<p><img src="/./pystudy/image-20211224230804928.png" alt="image-20211224230804928"></p>
+<h5 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h5><p>多态指的是同一个方法由于对象不同可能会产生不一样的行为，直白的讲就是不同的对象执行了不同的方法体，但方法名，参数列表一模一样</p>
+<p><strong>注意：1、只有方法存在多态，属性没有多态；2、多态的形成条件：继承和方法重写</strong></p>
+<h5 id="对象的浅拷贝和深拷贝（重要）"><a href="#对象的浅拷贝和深拷贝（重要）" class="headerlink" title="对象的浅拷贝和深拷贝（重要）"></a>对象的浅拷贝和深拷贝（重要）</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> copy</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MobilePhone</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,cpu,screen</span>):</span><br><span class="line">        <span class="variable language_">self</span>.cpu = cpu</span><br><span class="line">        <span class="variable language_">self</span>.screen = screen</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">CPU</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">calculate</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;计算，算个12345&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;CPU对象:&quot;</span>,<span class="variable language_">self</span>)</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Screen</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">show</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;显示一个好看的画面，亮瞎你的钛合金眼&quot;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;屏幕对象:&quot;</span>,<span class="variable language_">self</span>)</span><br><span class="line">c = CPU()</span><br><span class="line">s = Screen()</span><br><span class="line">m = MobilePhone(c,s)</span><br><span class="line"></span><br><span class="line">m.cpu.calculate()</span><br><span class="line">n = m</span><br><span class="line"><span class="built_in">print</span>(m,n)</span><br><span class="line">m2 = copy.copy(m)  <span class="comment">#对m进行浅拷贝</span></span><br><span class="line"><span class="built_in">print</span>(m,m2)</span><br><span class="line"><span class="string">&quot;&quot;&quot;m此时和m2拥有相同的cpu和screen对象&quot;&quot;&quot;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------m的cpu和screen对象---------&quot;</span>)</span><br><span class="line">m.cpu.calculate()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------m2的cpu和screen对象---------&quot;</span>)</span><br><span class="line">m2.cpu.calculate()</span><br><span class="line"><span class="string">&quot;&quot;&quot;m此时和m3拥有不同的cpu和screen对象&quot;&quot;&quot;</span></span><br><span class="line">m3 = copy.deepcopy(m)  <span class="comment">#对m进行深拷贝</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;-------m3的cpu和screen对象---------&quot;</span>)</span><br><span class="line">m3.cpu.calculate()</span><br></pre></td></tr></table></figure>
+
+<p><img src="/./pystudy/image-20211225161427261.png" alt="image-20211225161427261"></p>
+<h6 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h6><p>工厂是用来制造东西的，这里的工厂就是为了建立对象而存在。可以根据传入的指定类创建该类的对象</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">FactoryCar</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">creat_car</span>(<span class="params">self,car</span>):</span><br><span class="line">        <span class="keyword">if</span> (car == <span class="string">&quot;宝马&quot;</span>):</span><br><span class="line">            <span class="keyword">return</span> BMW()</span><br><span class="line">        <span class="keyword">elif</span> (car == <span class="string">&quot;奔驰&quot;</span>):</span><br><span class="line">            <span class="keyword">return</span> Benz()</span><br><span class="line">        <span class="keyword">elif</span> (car == <span class="string">&quot;比亚迪&quot;</span>):</span><br><span class="line">            <span class="keyword">return</span> BYD()</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;无法创建&quot;</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">BMW</span>:</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">BYD</span>:</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Benz</span>:</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"><span class="string">&quot;首先创建一个工厂对象&quot;</span></span><br><span class="line">factor = FactoryCar()</span><br><span class="line"><span class="string">&quot;通过工厂对象的汽车制造方法创建一个宝马对象&quot;</span></span><br><span class="line">bmw = factor.creat_car(<span class="string">&quot;宝马&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h6 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h6><p>单例的意思就是一个实例对象，创建一个对象并且只初始化一次，即 _ _new _ _和 _ _init _ _两个方法<strong>只执行一次</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;测试单例模式&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MySingleton</span>:</span><br><span class="line">    __obj = <span class="literal">None</span></span><br><span class="line">    __initFlag = <span class="literal">True</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__new__</span>(<span class="params">cls, *args, **kwargs</span>):</span><br><span class="line">        <span class="string">&quot;onj为空则创建一个对象&quot;</span></span><br><span class="line">        <span class="keyword">if</span> cls.__obj <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            cls.__obj = <span class="built_in">object</span>.__new__(cls)</span><br><span class="line">        <span class="string">&quot;一次执行完之后下一次再执行则返回上一次创建的对象&quot;</span></span><br><span class="line">        <span class="keyword">return</span> cls.__obj</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,name</span>):</span><br><span class="line">        <span class="keyword">if</span> MySingleton.__initFlag <span class="keyword">is</span> <span class="literal">True</span>:  <span class="comment">#仅执行一次初始化方法</span></span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;init----&quot;</span>)</span><br><span class="line">            <span class="variable language_">self</span>.name = name</span><br><span class="line">            <span class="string">&quot;执行一次后就将其置为False&quot;</span></span><br><span class="line">            MySingleton.__initFlag = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">a = MySingleton(<span class="string">&quot;aa&quot;</span>)</span><br><span class="line">b = MySingleton(<span class="string">&quot;bb&quot;</span>)</span><br><span class="line">c = MySingleton(<span class="string">&quot;cc&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(b)</span><br><span class="line"><span class="built_in">print</span>(c)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/./pystudy/image-20211226150249919.png" alt="image-20211226150249919"></p>
+<h3 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h3>
+      </section>
+
+      
+      
+        <nav class="article-nav">
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2024/07/20/hello-world/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">Hello World</h2>
+        </a>
+      
+      <div class="card-text--row">Newer</div>
+    </div>
+  </article>
+</div>
+          
+          
+        </nav>
+      
+
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
+    </div>
+    <div class="widget-info">
+      <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-body">
+    
+      <img src="https://s.gravatar.com/avatar/2d6b803eea37de0257620d5fabee7e64?s=200&amp;r=g&amp;d=retro" class="soft-size--round soft-style--box" alt="Sukoshi">
+    
+    
+      <h2>Sukoshi</h2>
+    
+    
+      <p>贵在坚持</p>
+    
+
+    <div class="count-box">
+      <div class="count-box--item">
+        <svg class="icon icon-article" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M240.51564747 647.74217627h196.07203239c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806V165.10332731c0-33.18142087-30.16492806-60.32985613-60.32985612-60.32985611H245.04038668C225.43318342 104.7734712 210.35071939 119.85593522 210.35071939 139.46313845V617.57724821c0 16.59071043 13.57421762 30.16492806 30.16492808 30.16492806z m663.62841731-452.47392089v482.63884894c0 33.18142087-27.14843525 60.32985613-60.32985612 60.32985613H180.18579134c-33.18142087 0-60.32985613-27.14843525-60.32985612-60.32985613V195.26825538c-49.77213131 0-90.49478418 40.72265287-90.49478417 90.49478417v452.4739209c0 49.77213131 40.72265287 90.49478418 90.49478417 90.49478417h286.56681657c16.59071043 0 30.16492806 13.57421762 30.16492807 30.16492807s13.57421762 30.16492806 30.16492805 30.16492806h90.49478418c16.59071043 0 30.16492806-13.57421762 30.16492805-30.16492806s13.57421762-30.16492806 30.16492807-30.16492807h286.56681657c49.77213131 0 90.49478418-40.72265287 90.49478417-90.49478417V285.76303955c0-49.77213131-40.72265287-90.49478418-90.49478417-90.49478417zM587.41232014 647.74217627h191.54729318c19.60720323 0 34.68966726-15.08246403 34.68966729-34.68966727V134.93839925c0-16.59071043-13.57421762-30.16492806-30.16492808-30.16492805H617.57724821c-30.16492806 0-60.32985613 27.14843525-60.32985612 60.32985611v452.4739209c0 16.59071043 13.57421762 30.16492806 30.16492805 30.16492806z" fill="currentColor"></path>
+</svg>
+        <span>4</span>
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+        0
+      </div>
+      <div class="count-box--item">
+        <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+        0
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+
+      
+<section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-notice" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M512 945.02305225v28.15620663a24.27259221 24.27259221 0 0 1-24.27259221 24.27259335H394.0352a48.54518557 48.54518557 0 0 1-41.74885888-23.78714112l-110.68302222-184.47170332a132.04290333 132.04290333 0 0 1-17.47626667-48.54518557h118.4502511a200.97706667 200.97706667 0 0 1 76.21594113 14.56355556l20.38897777 133.49925888a48.54518557 48.54518557 0 0 0 36.40888888 27.67075555l16.01991111 2.91271112a24.27259221 24.27259221 0 0 1 20.38897778 25.72894889zM997.45185223 463.45481443a194.18074112 194.18074112 0 0 1-38.8361489 116.50844445 24.75804445 24.75804445 0 0 1-36.4088889 0l-34.95253333-34.95253333a24.27259221 24.27259221 0 0 1-2.91271111-30.58346667 97.09036999 97.09036999 0 0 0 0-106.79940665 24.27259221 24.27259221 0 0 1 2.91271111-30.58346666l34.95253333-34.95253334a24.75804445 24.75804445 0 0 1 18.93262223-7.28177777 26.2144 26.2144 0 0 1 17.47626667 9.70903665A194.18074112 194.18074112 0 0 1 997.45185223 463.45481443z m-194.18074112-388.36148111v776.72296335a48.54518557 48.54518557 0 0 1-48.54518556 48.54518443h-28.64165888a48.54518557 48.54518557 0 0 1-33.98163001-14.07810332l-145.63555556-143.20829668A291.27111111 291.27111111 0 0 0 342.57730333 657.63555556H172.18370333a145.63555556 145.63555556 0 0 1-145.63555556-145.63555556v-97.09036999a145.63555556 145.63555556 0 0 1 145.63555556-145.63555556h170.3936a291.27111111 291.27111111 0 0 0 206.31703779-85.43952668l145.63555555-143.20829554a48.54518557 48.54518557 0 0 1 33.98162888-14.07810446H754.72592555a48.54518557 48.54518557 0 0 1 48.54518556 48.54518555z" fill="currentColor"></path>
+</svg>
+    <span>NOTICE</span>
+  </div>
+  <div class="widget-body">
+    <p>flex-block主题部分重构，详情查看https://github.com/miiiku/flex-block</p>
+  </div>
+</section>
+
+
+      <section class="widget-categories widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-categories" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M900.3614811 257.09082106h-339.81629553l-67.96326003-101.9448889c-19.41807444-29.12711113-48.54518557-43.69066667-82.52681443-43.69066667H123.6385189c-53.39970333 0-97.09036999 43.69066667-97.09037113 97.09036999v582.54222222c0 53.39970333 43.69066667 97.09036999 97.09037113 97.09037002h776.7229622c53.39970333 0 97.09036999-43.69066667 97.09037113-97.09037002V354.18119104c0-53.39970333-43.69066667-97.09036999-97.09037113-97.09036998z m-97.09036999 242.72592554H220.72888889c-24.27259221 0-48.54518557-24.27259221-48.54518556-48.54518556s24.27259221-48.54518557 48.54518556-48.54518444h582.54222222c24.27259221 0 48.54518557 24.27259221 48.54518556 48.54518444s-24.27259221 48.54518557-48.54518556 48.54518556z" fill="currentColor"></path>
+</svg>
+      <span>CATEGORIES</span>
+  </div>
+  <div class="widget-body">
+    <ul class="categories-list">
+      
+    </ul>
+  </div>
+</section>
+
+      <section class="widget-tags widget-item  layout-margin content-padding--primary soft-size--large soft-style--box">
+  <div class="widget-title">
+    <svg class="icon icon-tags" viewBox="0 0 1098 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M283.42180005 272q0-28.38857157-20.09142843-48.48000001t-48.47999998-20.09142842-48.48000002 20.09142842-20.09142846 48.48000001 20.09142846 48.48 48.48000002 20.09142843 48.47999998-20.09142843 20.09142843-48.48zM855.0332285 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.03999997 263.58857157q-20.9142853 19.81714313-48.75428534 19.81714312-28.38857157 0-48.20571468-19.81714312l-383.04-383.58857157q-20.36571468-19.81714313-34.55999999-54.10285688t-14.19428534-62.6742853l0-222.85714313q0-27.84000002 20.36571469-48.20571469t48.2057147-20.36571466l222.85714313 0q28.38857157 0 62.6742853 14.19428529t54.65142842 34.55999999l383.04000001 382.49142843q19.81714313 20.9142853 19.81714314 48.75428532zM1060.74751475 580.57142843q0 28.38857157-19.81714313 48.2057147l-263.04 263.58857157q-20.9142853 19.81714313-48.75428531 19.81714312-19.26857155 0-31.61142843-7.47428531t-28.38857159-24.13714314l251.79428534-251.7942853q19.81714313-19.81714313 19.81714308-48.20571469 0-27.84000002-19.81714308-48.75428531l-383.04000001-382.49142845q-20.36571468-20.36571468-54.65142842-34.55999999t-62.67428532-14.19428534l120 0q28.38857157 0 62.67428532 14.19428534t54.65142842 34.55999999l383.03999998 382.49142845q19.81714313 20.9142853 19.81714314 48.75428531z" fill="currentColor"></path>
+</svg>
+    <span>TAGS</span>
+  </div>
+  <div class="widget-body">
+    <div class="tags-cloud">
+      
+    </div>
+  </div>
+</section>
+    </div>
+  </article>
+</div>
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    
+    <div class="social-icons">
+      
+        
+      
+        
+      
+        
+      
+        
+          <a href="https://github.com/miiiku/" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-github" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64.6 512c0 195.6 125.4 361.9 300.1 422.9 23.5 5.9 19.9-10.8 19.9-22.2v-77.6c-135.8 15.9-141.3-74-150.5-89-18.5-31.5-61.9-39.5-49-54.5 31-15.9 62.5 4 98.9 58 26.4 39.1 77.9 32.5 104.1 26 5.7-23.5 17.9-44.5 34.7-60.9-140.7-25.2-199.4-111.1-199.4-213.3 0-49.5 16.4-95.1 48.4-131.8-20.4-60.6 1.9-112.4 4.9-120.1 58.2-5.2 118.5 41.6 123.3 45.3 33.1-8.9 70.8-13.7 112.9-13.7 42.4 0 80.3 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.4-43.9 2.9 7.7 24.7 58.3 5.5 118.1 32.5 36.8 49 82.8 49 132.4 0 102.3-59 188.3-200.2 213.2 23.5 23.3 38.1 55.5 38.1 91.1v112.7c0.8 9 0 17.9 15.1 17.9C832.7 877 960.4 709.4 960.4 512.1c0-247.5-200.6-447.9-447.9-447.9C265 64.1 64.6 264.5 64.6 512z"></path>
+</svg>
+          </a>
+        
+      
+        
+          <a href="https://twitter.com/guanquanhong" class="soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+            <svg class="icon icon-twitter" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M962.285714 233.142857q-38.285714 56-92.571429 95.428571 0.571429 8 0.571429 24 0 74.285714-21.714286 148.285714t-66 142-105.428571 120.285714-147.428571 83.428571-184.571429 31.142857q-154.857143 0-283.428571-82.857143 20 2.285714 44.571429 2.285714 128.571429 0 229.142857-78.857143-60-1.142857-107.428571-36.857143t-65.142857-91.142857q18.857143 2.857143 34.857143 2.857143 24.571429 0 48.571429-6.285714-64-13.142857-106-63.714286t-42-117.428571l0-2.285714q38.857143 21.714286 83.428571 23.428571-37.714286-25.142857-60-65.714286t-22.285714-88q0-50.285714 25.142857-93.142857 69.142857 85.142857 168.285714 136.285714t212.285714 56.857143q-4.571429-21.714286-4.571429-42.285714 0-76.571429 54-130.571429t130.571429-54q80 0 134.857143 58.285714 62.285714-12 117.142857-44.571429-21.142857 65.714286-81.142857 101.714286 53.142857-5.714286 106.285714-28.571429z"></path>
+</svg>
+          </a>
+        
+      
+    </div>
+     
+    <p>&copy; 2024 <a href="/" target="_blank">Mr Du</a></p>
+
+    
+
+    <p>Powered by <a href="https://hexo.io" target="_blank" rel="noopener noreferrer">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank" rel="noopener noreferrer author">flex-block</a></p>
+
+    <p>
+      <a href="javascript:;" id="theme-light">🌞 浅色</a>
+      <a href="javascript:;" id="theme-dark">🌛 深色</a>
+      <a href="javascript:;" id="theme-auto">🤖️ 自动</a>
+    </p>
+  </div>
+</footer>
+  </div>
+
+  <div class="back-to-top-fixed soft-size--round soft-style--box">
+    <svg class="icon icon-back-to-top" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <path d="M725.333333 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8l-213.333333-213.333333c-17.066667-17.066667-17.066667-42.666667 0-59.733333s42.666667-17.066667 59.733333 0l213.333333 213.333333c17.066667 17.066667 17.066667 42.666667 0 59.733333C746.666667 422.4 738.133333 426.666667 725.333333 426.666667z"></path>
+      <path d="M298.666667 426.666667c-12.8 0-21.333333-4.266667-29.866667-12.8-17.066667-17.066667-17.066667-42.666667 0-59.733333l213.333333-213.333333c17.066667-17.066667 42.666667-17.066667 59.733333 0s17.066667 42.666667 0 59.733333l-213.333333 213.333333C320 422.4 311.466667 426.666667 298.666667 426.666667z"></path>
+      <path d="M512 896c-25.6 0-42.666667-17.066667-42.666667-42.666667L469.333333 170.666667c0-25.6 17.066667-42.666667 42.666667-42.666667s42.666667 17.066667 42.666667 42.666667l0 682.666667C554.666667 878.933333 537.6 896 512 896z"></path>
+    </svg>
+  </div>
+
+  
+  <!-- aplayer -->
+
+
+<!-- dplayer -->
+
+
+<!-- copy button  -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+<!-- https://clipboardjs.com/ -->
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  
+  <!-- 尾部用户自定义相关内容 -->
+</body>
+</html>
